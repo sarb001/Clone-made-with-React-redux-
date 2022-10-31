@@ -13,8 +13,8 @@ import {add} from '../Slice/CartSlice';
       {
           const res = await fetch('https://fakestoreapi.com/products');
           const data = await res.json();
-          console.log(data)
-;         setproducts(data);
+          console.log(data);
+          setproducts(data);
       }
       fetchprod();
    },[])
