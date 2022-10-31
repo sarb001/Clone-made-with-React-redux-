@@ -10,7 +10,8 @@ import store from './Slice/Store';
 function App() {
   return (
     <div className = "App">
-      <Provider store  = {store}>
+           {/* // Store value can be acceessible Globally  */}
+      <Provider store  = {store}> 
         <BrowserRouter >
           <Navbar />
             <Routes>

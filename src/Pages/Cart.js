@@ -8,8 +8,6 @@ import { remove } from '../Slice/CartSlice';
   const products = useSelector(state => state.cart);    // put  whole cart state in variable 
 
   const dispatch = useDispatch();
-
-
   const handleremove = (prodid) =>
   {
     dispatch(remove(prodid));
