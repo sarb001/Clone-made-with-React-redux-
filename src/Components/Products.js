@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import  { useDispatch } from 'react-redux';
+import {add} from '../Slice/CartSlice';
 
  function Products() 
  {
+  const dispatch = useDispatch();
    const [products,setproducts] = useState([]);
 
    useEffect(() =>
@@ -16,11 +19,17 @@ import React, { useEffect, useState } from 'react'
       fetchprod();
    },[])
 
+   const handleadd = (item) =>
+   {
+       dispatch(add(item));
+   }
+
+
   return (
     <div className = 'container' style = {{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',padding:'2%'}}> 
         {products.map(item =>
           (
-              <div className = "card-products"  style = {{backgroundColor:'burlywood',margin:'3% 5%'}}>
+              <div className = "card-products"  style = {{backgroundColor:'burlywood',margin:'3% 5%'}} key = {item.id}>
                    <div className="card-image" style = {{paddingTop:'9%'}}>
                         <span> <img src = {item.image} style = {{width:'50%'}} /> </span>
                    </div>
@@ -32,7 +41,7 @@ import React, { useEffect, useState } from 'react'
                          <span style = {{fontSize:'18px',fontWeight:'400'}}> {item.title} </span>
                        </div>
                    </div>
-                   <button>  Add to Cart  </button>
+                   <button onClick={() => handleadd(item)}>  Add to Cart  </button>
               </div>
           ))
         }
