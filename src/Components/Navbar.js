@@ -13,7 +13,7 @@ function Navbar() {
          <span className='logo'>  REDUX Store  </span>  
          <div className='first-part-nav' >
               <span>  <Link to = "/"> Home </Link> </span>
-              <span style = {{textAlign:'end'}}>  <Link to = "/cart"> Cart  : {items.length} </Link>  </span>
+              <span id = "cart-count" >  <Link to = "/cart"> Cart  : {items.length} </Link>  </span>
            
          </div>  
     </div>

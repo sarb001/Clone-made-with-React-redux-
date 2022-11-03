@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import  { useDispatch } from 'react-redux';
 import {add} from '../Slice/CartSlice';
 
+import './Products.css';
+
  function Products() 
  {
   const dispatch = useDispatch();
@@ -24,24 +26,25 @@ import {add} from '../Slice/CartSlice';
        dispatch(add(item));
    }
 
-
   return (
-    <div className = 'container' style = {{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',padding:'2%'}}> 
+    <div className = 'container' > 
         {products.map(item =>
           (
-              <div className = "card-products"  style = {{backgroundColor:'burlywood',margin:'3% 5%'}} key = {item.id}>
-                   <div className="card-image" style = {{paddingTop:'9%'}}>
-                        <span> <img src = {item.image} style = {{width:'50%'}} /> </span>
+              <div className = "card-products"  key = {item.id}>
+                   <div className="card-image" style = {{paddingTop:'9%',width:'100%',textAlign:'center',height:'20vh'}}>
+                        <span > <img src = {item.image} style = {{width:'50%',borderRadius:'50%'}} /> </span>
                    </div>
-                   <div className="card-content">
+                   <div className="card-content" style = {{height:'13vh'}}>
                        <div className="card-price">
-                            <span style = {{fontWeight:'700'}}> {item.price}  </span>
+                            <span style = {{fontWeight:'700'}}> Rs.-  {item.price}  </span>
                        </div>
                        <div className="card-title">
-                         <span style = {{fontSize:'18px',fontWeight:'400'}}> {item.title} </span>
+                         <span style = {{fontSize:'12px',fontWeight:'600'}}> {item.title} </span>
                        </div>
                    </div>
-                   <button onClick={() => handleadd(item)}>  Add to Cart  </button>
+                   <div style = {{textAlign:'center',padding:'6% 0%'}}>
+                    <button  id  = "cart-btn"  onClick={() => handleadd(item)}>  Add to Cart  </button>
+                   </div>
               </div>
           ))
         }

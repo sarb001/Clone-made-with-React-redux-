@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Components/Footer';
 import Products from '../Components/Products';
 
 import './Home.css';
@@ -11,6 +12,9 @@ export default function Home() {
          <section>
             <Products />
          </section>
+         <div className="footer-part">
+            <Footer />
+         </div>
     </div>
   )
 }
