@@ -1,0 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap');
+.home-main
+{
+    background-color: rgb(214, 233, 255);
+}
+.heading{
+    text-align: center;
+    font-family: 'Cormorant', serif;
+    font-size: 45px;
+    font-weight: 200;
+}
