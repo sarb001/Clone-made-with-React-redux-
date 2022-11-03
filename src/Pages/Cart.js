@@ -1,6 +1,5 @@
 import React from 'react';
 import './Cart.css';
-import Footer from '../Components/Footer';
 
 
 import { useSelector , useDispatch} from 'react-redux';    // useselector is imported 
@@ -19,7 +18,7 @@ import { remove } from '../Slice/CartSlice';
     <div> 
 
          
-         {  products?.length == '' ?  
+         {  products?.length === '' ?  
          <div style  = {{fontSize:'30px',fontWeight:'500',padding:'5% 5%'}}>  Cart is Empty .....
           </div> : (
 
@@ -28,7 +27,7 @@ import { remove } from '../Slice/CartSlice';
 
                 <div className="card-first">
                     <div className  = "card-image" style = {{paddingTop:'9%'}}>
-                          <span> <img src = {one.image} style = {{width:'20%'}} /> </span>
+                          <span> <img src = {one.image} style = {{width:'20%'}}  alt = "selected-img"/> </span>
                       </div>
                       <div className = "card-content">
                           <div className = "card-price">

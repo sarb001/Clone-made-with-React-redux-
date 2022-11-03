@@ -15,7 +15,6 @@ import './Products.css';
       {
           const res = await fetch('https://fakestoreapi.com/products');
           const data = await res.json();
-          console.log(data);
           setproducts(data);
       }
       fetchprod();
@@ -32,7 +31,7 @@ import './Products.css';
           (
               <div className = "card-products"  key = {item.id}>
                    <div className="card-image" style = {{paddingTop:'9%',width:'100%',textAlign:'center',height:'20vh'}}>
-                        <span > <img src = {item.image} style = {{width:'50%',borderRadius:'50%'}} /> </span>
+                        <span > <img src = {item.image} style = {{width:'50%',borderRadius:'50%'}}  alt = "images"/> </span>
                    </div>
                    <div className="card-content" style = {{height:'13vh'}}>
                        <div className="card-price">
