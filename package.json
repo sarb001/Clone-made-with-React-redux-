@@ -2,7 +2,7 @@
   "name": "reduxcart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/sarb001/Clone-with-Redux-Toolkit",
+  "homepage": "https://github.com/sarb001/Clone-made-with-React-redux-",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
     "@testing-library/jest-dom": "^5.16.5",
