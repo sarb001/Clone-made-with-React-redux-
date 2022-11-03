@@ -44,7 +44,6 @@ import { remove } from '../Slice/CartSlice';
               </div>)
            ))
          }
-         {/* <Footer /> */}
     </div>
   )
 }
