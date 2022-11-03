@@ -1,5 +1,24 @@
-.card-products
+.cart-products
 {
     background-color:burlywood;
      margin:3% 5%;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     padding: 2% 4%;
+}
+.card-second
+{
+    align-self: center;
+}
+#cart-remove-btn
+{
+    background-color: black;
+    color: white;
+    padding: 2% 7%;
+    border-radius: 50px;
+}
+.card-second
+{
+  text-align: end;
+  cursor: pointer;
 }
