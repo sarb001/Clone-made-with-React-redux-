@@ -12,7 +12,7 @@ function App() {
     <div className = "App">
            {/* // Store value can be acceessible Globally  */}
       <Provider store  = {store}> 
-        <BrowserRouter >
+        <BrowserRouter basename = {window.location.pathname || ''}>
           <Navbar />
             <Routes>
                 <Route  path = "/" element = {<Home />} > </Route>
