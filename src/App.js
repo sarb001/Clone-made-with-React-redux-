@@ -12,7 +12,7 @@ function App() {
     <div className = "App">
            {/* // Store value can be acceessible Globally  */}
       <Provider store  = {store}> 
-        <BrowserRouter basename = {window.location.pathname || ''}>
+        <BrowserRouter basename = {process.env.PUBLIC_URL}>
           <Navbar />
             <Routes>
                 <Route  path = "/" element = {<Home />} > </Route>
